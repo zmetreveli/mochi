@@ -1,0 +1,38 @@
+.cardCustom {
+  background-color: #1a1a1a;
+  border: none;
+  color: #dccca3;
+}
+.cardCustom {
+  height: 1000px;
+  background-color: red;
+  color: red;
+}
+
+.cardCustom img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.cardCustom .cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btnCustom {
+  background-color: #c97d12;
+  border: none;
+}
+
+.btnCustom:hover {
+  background-color: #b06b0f;
+}
+.mainBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 15px;
+  background-color: #131313;
+}

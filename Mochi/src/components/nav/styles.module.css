@@ -1,0 +1,37 @@
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  background-color: #000000;
+}
+
+.navbar:hover {
+  background-color: #212324;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.navLink {
+  font-size: 1.1rem;
+  color: #fff !important;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+/* 
+.navLink:hover {
+  color: #17a2b8 !important;
+} */
+
+.navbar-brand img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
