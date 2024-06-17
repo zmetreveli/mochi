@@ -70,8 +70,8 @@ button.addToCart {
   border: 0;
   outline: none;
   color: var(--secondary-color);
-  background-color: var(--secondary-color-lighter);
-  border-radius: 100%;
+  background-color: #d87b1d;
+  border-radius: 10px;
   font-size: 1.6rem;
   display: flex;
   align-items: center;

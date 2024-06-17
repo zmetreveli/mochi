@@ -97,6 +97,12 @@ const Blog = () => {
           estará ligado a la familia, el amor, la tradición y los buenos deseos
           para todos aquellos que los disfrutan.
         </p>
+        <div className={styles.book}>
+          <h6>Recipe</h6>
+          <div className={styles.cover}>
+            <p className={styles.mochiSecret}>Mochi Secret</p>
+          </div>
+        </div>
       </article>
     </div>
   );
