@@ -97,6 +97,15 @@ const Blog = () => {
           estará ligado a la familia, el amor, la tradición y los buenos deseos
           para todos aquellos que los disfrutan.
         </p>
+        <div className={styles.book}>
+          <img
+            className={styles.img}
+            src="https://www.insidehook.com/wp-content/uploads/2016/06/Masaharu-Morimoto-e1464978023471-1.jpg?fit=1425%2C1995"
+          />
+          <div className={styles.cover}>
+            <p className={styles.mochiSecret}>Mochi Master</p>
+          </div>
+        </div>
       </article>
     </div>
   );
