@@ -1,260 +1,72 @@
-.shoppingCart {
-  width: 250px;
-  height: 450px;
-  box-shadow: 0 0 50px 7px rgba(0, 0, 0, 0.123);
-  border-radius: 10px;
-  z-index: 999;
+/* styles.module.css */
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productList {
+  flex: 2;
+}
+
+.viewCartButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.viewCartButton:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
   background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.overlay {
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10px;
-}
-
-.shoppingCartFixed {
-  width: 250px;
-  height: 450px;
-  box-shadow: 0 0 50px 7px rgba(0, 0, 0, 0.123);
-  border-radius: 10px;
-  z-index: 999;
-  background-color: white;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  align-self: flex-end;
-  overflow: hidden;
-}
-
-.shoppingCartContainer {
-  width: 300px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding-left: 15px;
-  overflow: visible;
-}
-
-.shoppingCart > p {
-  width: 80%;
-  text-align: center;
-  font-size: 0.85rem;
-}
-
-.shoppingCartFixed > p {
-  width: 80%;
-  text-align: center;
-  font-size: 0.85rem;
-}
-
-.shoppingCartBackground {
-  width: 95%;
-  margin: 50px;
-}
-
-.shoppingListContainer {
-  height: 70%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  padding: 0;
-  overflow: visible;
-}
-
-.shoppingListContainer::-webkit-scrollbar {
-  display: none;
-}
-
-.crossIcon {
-  height: 15px;
-  width: 15px;
-  transform: translate(3px);
-}
-
-.shoppingListItem {
-  height: fit-content;
-  color: black;
-  width: 48%;
-
-  white-space: nowrap;
-  text-wrap: nowrap;
-  text-overflow: ellipsis;
-  text-align: left;
-  font-weight: 400;
-  font-size: 0.75rem;
-}
-
-.cartItemContainer {
-  padding: 8px 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(241, 249, 248);
-  width: calc(100% - 16px);
-  border-bottom: 1px solid rgb(179, 196, 198);
-  overflow: visible;
-  position: relative;
-}
-
-.ammountContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  background-color: white;
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.247);
-  height: 15px;
-  border-radius: 50px;
-  width: fit-content;
-  height: fit-content;
-}
-
-.quantityButton {
-  font-family: "quicksand";
-  height: 18px;
-  width: 18px;
-  background-color: var(--secondary-color);
-  color: white;
-  box-shadow: 0 0 0 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 0;
-  position: relative;
-}
-
-.quantityNumber {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--secondary-color);
-  width: 10px;
-  overflow: visible;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttonContentPlus {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  color: white;
-  box-shadow: 0 0 0 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  bottom: -15%;
-}
-
-.buttonContentMinus {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  color: white;
-  box-shadow: 0 0 0 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  bottom: 15.5%;
-}
-.deleteCartItemButton {
-  position: absolute;
-  right: 0px;
-  height: 30px;
-
-  background-color: white;
-  color: gray;
-  opacity: 0;
-  transition-delay: 0.5s;
-  z-index: -2;
-  border-radius: 0 20px 20px 0;
-  width: 30px;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 10px;
-}
-
-.cartItemContainer:hover > .deleteCartItemButton {
-  opacity: 1;
-  transform: translate(25px);
-  transition-delay: 0s;
-}
-
-.quantityButton:hover {
-  background-color: var(--primary-color);
-}
-
-.quantityButton:active {
-  size: 0.8;
-}
-
-.buyButton {
-  width: 100%;
-  border-radius: 0;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 0 0 0;
-  background-color: var(--secondary-color);
-  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  border-radius: 0 0 10px 10px;
-  color: white;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: 0.2s;
-  border-top: 3px solid transparent;
-  font-family: "quicksand";
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
-.buyButton:hover {
-  background-color: white;
-  border-top: 3px solid var(--primary-color);
-  color: var(--secondary-color);
-  animation: buyButtonAnimation 1s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes buyButtonAnimation {
-  from {
-    background-color: white;
-  }
-  50% {
-    background-color: var(--secondary-color-lighter);
-  }
-  to {
-    background-color: rgb(255, 255, 255);
-  }
-}
-
-b {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.transportContainer {
+.closeButton {
   position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cartContainer {
+  margin-top: 20px;
+}
+
+.cartItem {
   display: flex;
-  bottom: 50px;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  background-color: var(--secondary-color-lighter);
-  padding: 1px 5px;
-  border-radius: 50px;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
 }
 
-.scooterIcon {
-  height: 15px;
-  width: 15px;
-}
-
-.shoppingCart > h2 {
-  color: var(--secondary-color);
-  padding: 10px;
-}
-
-.shoppingCartFixed > h2 {
-  color: var(--secondary-color);
-  padding: 10px;
+.cartItem button {
+  margin: 0 5px;
 }

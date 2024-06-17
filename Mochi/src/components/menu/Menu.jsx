@@ -1,7 +1,10 @@
 import styles from "./styles.module.css";
+import React, { useState } from "react";
 import mochi from "../../assets/img/m2.jpeg";
 import mochi9 from "../../assets/img/m9.jpeg";
 import mochiCocolate from "../../assets/img/mochiChocolate.jpg";
+import ShoppingCartModal from "../shoppingCard/ShoppingCartModal";
+
 export default function ProductList({
   productName,
   productDescription,
@@ -12,8 +15,13 @@ export default function ProductList({
   product,
   restaurant,
 }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   const addToCart = () => {
-    if (shoppingList.find((e) => e.id === producto._id)) {
+    if (shoppingList.find((e) => e.id === product._id)) {
       const ProductIndex = shoppingList.findIndex((e) => e.id === product._id);
       const updatedShoppingList = [...shoppingList];
       updatedShoppingList[ProductIndex].ammount += 1;
@@ -231,11 +239,18 @@ export default function ProductList({
         </div>
         <div className={styles.bottomContainer}>
           <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
+          <button onClick={openModal} className={styles.addToCart}>
             +
           </button>
         </div>
       </div>
+      <ShoppingCartModal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        shoppingList={shoppingList}
+        setShoppingList={setShoppingList}
+        restaurant={restaurant}
+      />
     </div>
   );
 }
