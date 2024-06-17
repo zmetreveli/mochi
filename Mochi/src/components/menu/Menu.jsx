@@ -35,222 +35,226 @@ export default function ProductList({
   };
 
   return (
-    <div className={styles.flexiBox}>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img
-            className={styles.productImg}
-            src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
-          />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi artesano</h5>
-            <p className={styles.description}>mochi de chocolate</p>
+    <div className={styles.mainMenuBox}>
+      <div className={styles.flexiBox}>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img
+              className={styles.productImg}
+              src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
+            />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi artesano</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
           </div>
         </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
 
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img
-            className={styles.productImg}
-            src="https://telemaki.com/130964-square_home_default/mochi-artesano-de-te-verde.jpg"
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img
+              className={styles.productImg}
+              src="https://telemaki.com/130964-square_home_default/mochi-artesano-de-te-verde.jpg"
+            />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img
+              className={styles.productImg}
+              src="	https://telemaki.com/130968-square_home_default/combo-de-mochis-artesanos-3u.jpg"
+            />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Combo</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img className={styles.productImg} src={mochi} />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img className={styles.productImg} src={mochiCocolate} />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img className={styles.productImg} src={mochi9} />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img
+              className={styles.productImg}
+              src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
+            />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img
+              className={styles.productImg}
+              src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
+            />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img
+              className={styles.productImg}
+              src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
+            />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img
+              className={styles.productImg}
+              src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
+            />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img
+              className={styles.productImg}
+              src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
+            />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={addToCart} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.upperContainer}>
+            <img
+              className={styles.productImg}
+              src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
+            />
+            <div className={styles.textContainer}>
+              <h5 className={styles.hedder}>Mochi</h5>
+              <p className={styles.description}>mochi de chocolate</p>
+            </div>
+          </div>
+          <div className={styles.bottomContainer}>
+            <aside>{productPrice}</aside>
+            <button onClick={openModal} className={styles.addToCart}>
+              +
+            </button>
+          </div>
+        </div>
+        <div className={styles.modal}>
+          <ShoppingCartModal
+            isOpen={isModalOpen}
+            onRequestClose={closeModal}
+            shoppingList={shoppingList}
+            setShoppingList={setShoppingList}
+            restaurant={restaurant}
           />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
         </div>
       </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img
-            className={styles.productImg}
-            src="	https://telemaki.com/130968-square_home_default/combo-de-mochis-artesanos-3u.jpg"
-          />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Combo</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img className={styles.productImg} src={mochi} />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img className={styles.productImg} src={mochiCocolate} />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img className={styles.productImg} src={mochi9} />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img
-            className={styles.productImg}
-            src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
-          />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img
-            className={styles.productImg}
-            src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
-          />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img
-            className={styles.productImg}
-            src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
-          />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img
-            className={styles.productImg}
-            src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
-          />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img
-            className={styles.productImg}
-            src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
-          />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={addToCart} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.upperContainer}>
-          <img
-            className={styles.productImg}
-            src="https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg"
-          />
-          <div className={styles.textContainer}>
-            <h5 className={styles.hedder}>Mochi</h5>
-            <p className={styles.description}>mochi de chocolate</p>
-          </div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <aside>{productPrice}</aside>
-          <button onClick={openModal} className={styles.addToCart}>
-            +
-          </button>
-        </div>
-      </div>
-      <ShoppingCartModal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        shoppingList={shoppingList}
-        setShoppingList={setShoppingList}
-        restaurant={restaurant}
-      />
     </div>
   );
 }

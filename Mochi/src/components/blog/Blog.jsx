@@ -97,6 +97,7 @@ const Blog = () => {
           estará ligado a la familia, el amor, la tradición y los buenos deseos
           para todos aquellos que los disfrutan.
         </p>
+
         <div className={styles.book}>
           <img
             className={styles.img}

@@ -1,3 +1,8 @@
+.mainMenuBox {
+  display: grid;
+  grid-template-columns: 70% 45%;
+  background-color: #222;
+}
 .flexiBox {
   display: flex;
   flex-wrap: wrap;
@@ -5,7 +10,7 @@
 }
 
 .mainContainer {
-  width: calc(30% - 10px);
+  width: calc(45% - 10px);
   height: 120px;
   background-color: #222;
   border-radius: 10px;

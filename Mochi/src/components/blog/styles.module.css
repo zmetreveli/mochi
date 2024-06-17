@@ -3,11 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .mainBox {
   width: clamp(10px, 100%, 1360px);
   margin: 0 auto;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #131313;
   color: #fff;
 }
@@ -26,7 +27,8 @@
 }
 
 .imageArticle {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   margin-top: 20px;
 }
@@ -34,6 +36,8 @@
 @media (min-width: 768px) {
   .mainBox {
     flex-direction: row;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 
   .box1,
@@ -51,7 +55,7 @@
 }
 
 .article {
-  height: 1350px;
+  height: auto;
   max-width: 1100px;
   background-color: #232321;
   padding: 20px;
@@ -66,12 +70,20 @@
   color: #131313;
   background-color: #dccca3;
 }
+
 .opening {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-left: -70px;
-  margin-right: -70px;
   margin-bottom: 90px;
+}
+
+@media (min-width: 768px) {
+  .opening {
+    flex-direction: row;
+    margin-left: -70px;
+    margin-right: -70px;
+  }
 }
 
 .book {
@@ -80,27 +92,14 @@
   width: 220px;
   height: 300px;
   background-color: #131313;
-  -webkit-box-shadow: 1px 1px 12px #000;
   box-shadow: 1px 1px 12px #000;
-  -webkit-transform: preserve-3d;
-  -ms-transform: preserve-3d;
   transform: preserve-3d;
-  -webkit-perspective: 2000px;
   perspective: 2000px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   color: #000;
-  position: absolute;
-  top: 195%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 50px auto;
 }
 
 .cover {
@@ -111,29 +110,16 @@
   height: 100%;
   border-radius: 10px;
   cursor: pointer;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transform-origin: 0;
-  -ms-transform-origin: 0;
   transform-origin: 0;
-  -webkit-box-shadow: 1px 1px 12px #000;
   box-shadow: 10px 7px 20px orange;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .book:hover .cover {
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transform: rotatey(-80deg);
-  -ms-transform: rotatey(-80deg);
   transform: rotatey(-80deg);
 }
 
@@ -141,6 +127,7 @@
   font-weight: bolder;
   color: rgb(178, 168, 168);
 }
+
 .img {
   height: 280px;
 }
