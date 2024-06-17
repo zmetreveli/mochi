@@ -95,7 +95,7 @@ const Footer = () => {
           </div>
 
           <ul className={styles.example2}>
-            <li className={styles.iconContent}>
+            {/* <li className={styles.iconContent}>
               <a
                 class="dark"
                 href="https://linkedin.com/"
@@ -119,8 +119,8 @@ const Footer = () => {
                 </svg>
               </a>
               <div className={styles.tooltip}>LinkedIn</div>
-            </li>
-            <li className={styles.iconContent}>
+            </li> */}
+            {/* <li className={styles.iconContent}>
               <a
                 href="https://www.github.com/"
                 aria-label="GitHub"
@@ -143,7 +143,7 @@ const Footer = () => {
                 </svg>
               </a>
               <div className={styles.tooltip}>GitHub</div>
-            </li>
+            </li> */}
             <li className={styles.iconContent}>
               <a
                 href="https://www.instagram.com/mochi_france?igsh=YXk0YzM0OGh5Z2Np&utm_source=qr"

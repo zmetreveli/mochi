@@ -4,6 +4,7 @@ import NavBar from "./components/nav/NavBar";
 import Blog from "./components/blog/Blog";
 import Menu from "./components/menu/Menu";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import "antd/dist/antd.css";
 import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
