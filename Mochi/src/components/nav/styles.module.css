@@ -22,10 +22,6 @@
   margin-left: 15px;
   transition: color 0.3s ease;
 }
-/* 
-.navLink:hover {
-  color: #17a2b8 !important;
-} */
 
 .navbar-brand img {
   border-radius: 50%;
@@ -34,4 +30,57 @@
 
 .navbar-brand img:hover {
   transform: scale(1.1);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.icon {
+  color: #dccca3;
+  margin: 50px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .brandName {
+    font-size: 1.2rem;
+  }
+
+  .navLink {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+
+  .icon {
+    margin: 20px;
+  }
 }
