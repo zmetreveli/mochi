@@ -125,9 +125,12 @@
 
 .mochiSecret {
   font-weight: bolder;
-  color: rgb(178, 168, 168);
+  color: #dccca3;
 }
 
 .img {
   height: 280px;
+}
+.p {
+  font-size: small;
 }

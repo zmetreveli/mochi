@@ -12,55 +12,58 @@ const Blog = () => {
         </div>
         <div className={styles.box2}>
           <h1 className={styles.h1}>
-            Mochi, un postre japonés que triunfa en occidente
+            Mochi, un dessert japonais qui triomphe en Occident
           </h1>
-          <p>
-            Los Mochis, el postre por excelencia de Japón, son bolitas que
-            tienen un sabor delicioso y ofrecen muchas posibilidades de texturas
-            diferentes. Aún así, el potencial valor de este postre es cultural
-            ya que lleva muchos lustros presente en la historia nipona y se ha
-            preservado hasta nuestros días. Tradicionalmente, los mochis son muy
-            consumidos […]
+          <p className={styles.p}>
+            Les mochis, le dessert par excellence du Japon, sont des petites
+            boules au goût délicieux offrant une grande variété de textures.
+            Cependant, la valeur potentielle de ce dessert est surtout
+            culturelle, car il est présent dans l'histoire japonaise depuis de
+            nombreuses décennies et a été préservé jusqu'à nos jours.
+            Traditionnellement, les mochis sont très consommés […]
           </p>
         </div>
       </div>
       <article className={styles.article}>
-        <p>
-          Los Mochis, el postre por excelencia de Japón, son bolitas que tienen
-          un sabor delicioso y ofrecen muchos posibilidades de texturas
-          diferentes. Aún así el potencial valor de este postre es cultural ya
-          que lleva muchos lustros presente en la história nipona y se ha
-          preservado hasta nuestros dias.
+        <p className={styles.p}>
+          Les mochis, le dessert par excellence du Japon, sont des petites
+          boules au goût délicieux offrant de nombreuses possibilités de
+          textures différentes. Pourtant, la valeur potentielle de ce dessert
+          est avant tout culturelle, car il est présent dans l'histoire
+          japonaise depuis de nombreuses décennies et a été préservé jusqu'à nos
+          jours.
         </p>
-        <p>
-          Tradicionalmente, los mochis son muy consumidos por los japoneses en
-          las fiestas de fin de año, porque tienen la creencia que estos
-          manjares dan buena suerte, prosperidad y felicidad de cara al nuevo
-          año, siendo una tradición que los japoneses han mantenido durante
-          siglos. El Mochi es un alimento bastante interesante, existen
-          distintos tipos, pero una cosa que se mantiene constante, es la
-          deliciosa base de arroz la cual se prepara durante muchas horas.
+        <p className={styles.p}>
+          Traditionnellement, les mochis sont très consommés par les Japonais
+          lors des fêtes de fin d'année, car ils croient que ces délices
+          apportent chance, prospérité et bonheur pour la nouvelle année. C'est
+          une tradition que les Japonais ont maintenue pendant des siècles. Le
+          mochi est un aliment assez intéressant, avec différents types, mais
+          une chose reste constante : la délicieuse base de riz, qui est
+          préparée pendant de nombreuses heures.
         </p>
-        <p>
-          No existe un relleno de mochis estándard, siempre depende del gusto de
-          cada uno. Existen mochis que se comen en sopa con verduras, otros que
-          son perfectos para disfrutar como refrigerios y los más destacados son
-          los que contienen relleno de helado, sin duda un postre delicioso y
-          perfecto para cualquier ocasión.
+        <p className={styles.p}>
+          Il n'existe pas de garniture standard pour les mochis, cela dépend
+          toujours des goûts de chacun. Il existe des mochis qui se mangent dans
+          une soupe avec des légumes, d'autres qui sont parfaits pour être
+          dégustés comme en-cas, et les plus remarquables sont ceux qui
+          contiennent une garniture de glace, sans aucun doute un dessert
+          délicieux et parfait pour toutes les occasions.
         </p>
-        <h2>¿Cómo se hacen los mochis?</h2>
+        <h2>Comment sont fabriqués les mochis ?</h2>
         <div className={styles.boxBlock}>
-          <p>
-            Su preparación es una técnica que lleva muchas horas, práctica y
-            paciencia, para preparar un mochi uno debe preparar el arroz
-            glutinoso mojándolo. Preparar el arroz lleva aproximadamente de 2 a
-            3 horas, después de su remojo, se cocina al vapor, se agrega agua y
-            comienza a amasar, una vez amasada esta masa se une al almidón, y
-            aquí se puede comenzar a moldear, el objetivo es crear pequeñas
-            bolas recubiertas de relleno y moler hasta obtener una bola
-            perfecta. Es un proceso que es delicado y requiere mucha paciencia,
-            la disciplina requerida para hacerlo sin duda hacen del mochi un
-            postre auténtico y delicioso.
+          <p className={styles.p}>
+            Sa préparation est une technique qui demande beaucoup d'heures, de
+            pratique et de patience. Pour préparer un mochi, il faut d'abord
+            préparer le riz gluant en le faisant tremper. La préparation du riz
+            prend environ 2 à 3 heures. Après le trempage, il est cuit à la
+            vapeur, de l'eau est ajoutée et on commence à le pétrir. Une fois
+            pétrie, cette pâte est mélangée avec de l'amidon, et c'est à ce
+            moment que l'on peut commencer à la façonner. L'objectif est de
+            créer de petites boules remplies de garniture et de les pétrir
+            jusqu'à obtenir une boule parfaite. C'est un processus délicat qui
+            nécessite beaucoup de patience. La discipline requise pour le faire
+            fait sans aucun doute du mochi un dessert authentique et délicieux.
           </p>
         </div>
         <p>
@@ -70,32 +73,33 @@ const Blog = () => {
             alt="Mochi Chocolate"
           />
         </p>
-        <p>
-          La preparación de estas deliciosas bolas es muy característico, el
-          relleno depende siempre de nuestros gustos, pero desde luego, uno de
-          los rellenos que ha conseguido ser la unión perfecta para los mochis,
-          es el helado, está combinación ha logrado ser las más popular en la
-          gastronomía, es por eso que los mochis suelen asociarse más a un
-          postre que a un complemento para sopas o un bocadillo, la fusión con
-          el helado a dado un sin fin de oportunidades y sabores a este postre
-          tan original, está hecho para ser degustado después de una buena
-          comida. Entre los tipos de mochis existentes, la variante de helado
-          aprovecha las inclinaciones de los consumidores hacia los postres
-          llenos de sabor natural, ciertamente, esta innovación ha hecho que los
-          mochis alcancen la cúspide de los postres populares en la gastronomía.
+        <p className={styles.p}>
+          La préparation de ces délicieuses boules est très caractéristique. La
+          garniture dépend toujours de nos goûts, mais sans aucun doute, l'une
+          des garnitures qui a réussi à être l'association parfaite pour les
+          mochis est la glace. Cette combinaison est devenue la plus populaire
+          en gastronomie. C'est pourquoi les mochis sont souvent associés
+          davantage à un dessert qu'à un complément pour les soupes ou un
+          en-cas. La fusion avec la glace a donné une infinité d'opportunités et
+          de saveurs à ce dessert si original, conçu pour être dégusté après un
+          bon repas. Parmi les types de mochis existants, la variante glacée
+          profite des inclinations des consommateurs vers les desserts aux
+          saveurs naturelles. Cette innovation a certainement fait des mochis
+          l'un des desserts les plus populaires en gastronomie.
         </p>
-        <p>
-          Hoy en día, el mochi es un postre popular durante todo el año. Hemos
-          valorado la historia y el significado de este pequeño manjar, su
-          preparación sin duda es especial, algo que hace aún más exquisito este
-          plato, por lo tanto la popularidad del mochi no es ningún misterio,
-          una pequeña bola blanda, colorida y sabrosa, es algo que sin duda
-          llama la atención en el mercado de la gastronomía, teniendo en cuenta
-          que puede ser consumida en salado y dulce, hace de esta comida un
-          manjar flexible que se adapta a los gustos de cada uno, sin duda, los
-          mochis van más allá que una simple bola con relleno, el mochi siempre
-          estará ligado a la familia, el amor, la tradición y los buenos deseos
-          para todos aquellos que los disfrutan.
+        <p className={styles.p}>
+          De nos jours, le mochi est un dessert populaire tout au long de
+          l'année. Nous avons apprécié l'histoire et la signification de ce
+          petit délice. Sa préparation est sans aucun doute spéciale, ce qui
+          rend ce plat encore plus exquis. Par conséquent, la popularité du
+          mochi n'est pas un mystère : une petite boule molle, colorée et
+          savoureuse attire sans aucun doute l'attention sur le marché de la
+          gastronomie. Étant donné qu'il peut être consommé en version salée et
+          sucrée, cela fait de cette nourriture un délice flexible qui s'adapte
+          aux goûts de chacun. Sans aucun doute, les mochis vont bien au-delà
+          d'une simple boule farcie. Le mochi sera toujours lié à la famille, à
+          l'amour, à la tradition et aux bons vœux pour tous ceux qui en
+          profitent.
         </p>
 
         <div className={styles.book}>
