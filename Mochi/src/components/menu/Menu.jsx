@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "./styles.module.css";
+// import styles from "./styles.module.css";
 import ProductList from "./ProductList";
-import ShoppingCartModal from "../shoppingCart/ShoppingCartModal";
+// import ShoppingCartModal from "../shoppingCart/ShoppingCartModal";
 const Menu = () => {
   const [shoppingList, setShoppingList] = useState([]);
   const [isShoppingCartModalOpen, setIsShoppingCartModalOpen] = useState(false);
@@ -85,13 +85,13 @@ const Menu = () => {
         shoppingList={shoppingList}
         setShoppingList={setShoppingList}
       />
-      <button onClick={handleOpenModal}>Ver Carrito</button>
+      {/* <button onClick={handleOpenModal}>Ver Carrito</button>
       {isShoppingCartModalOpen && (
         <>
           <div className={styles.backdrop} onClick={handleCloseModal}></div>
           <ShoppingCartModal items={shoppingList} onClose={handleCloseModal} />
         </>
-      )}
+      )} */}
     </div>
   );
 };

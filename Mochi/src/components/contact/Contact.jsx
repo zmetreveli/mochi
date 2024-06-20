@@ -7,16 +7,24 @@ const Contact = () => {
   };
   return (
     <div className={styles.mainBox}>
-      <div className={styles.card} onClick={handleCall}>
-        <div className={styles.cardDate}>
-          <span className={styles.time}>14:34</span>
-          <span className={styles.date}>Mon 21 August</span>
+      {/* <div className={styles.phoneDiv}>
+        <div className={styles.inf}>
+          <h1>
+            Contact
+            <p>hola</p>
+          </h1>
         </div>
-        <div className={styles.popup}>
-          <p className={styles.title}>Call to Mochi</p>
-          <p>+ 33 753 777 557</p>
+        <div className={styles.card} onClick={handleCall}>
+          <div className={styles.cardDate}>
+            <span className={styles.time}>14:34</span>
+            <span className={styles.date}>Mon 21 August</span>
+          </div>
+          <div className={styles.popup}>
+            <p className={styles.title}>Call to Mochi</p>
+            <p>+ 33 753 777 557</p>
+          </div>
         </div>
-      </div>
+      </div> */}
 
       <div className={styles.main}>
         <div className={styles.up}>

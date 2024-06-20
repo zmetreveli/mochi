@@ -1,7 +1,8 @@
 .mainBox {
   display: flex;
   flex-direction: column; /* Cambio clave aquí */
-  height: auto;
+  height: 500px;
+  width: 1050px;
   background-color: black;
   justify-content: center; /* Alinea verticalmente */
   align-items: center; /* Alinea horizontalmente */
@@ -102,7 +103,7 @@
   height: 90px;
   outline: none;
   border: none;
-  background: white;
+  background: black;
   border-radius: 90px 5px 5px 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -120,7 +121,7 @@
   height: 90px;
   outline: none;
   border: none;
-  background: white;
+  background: black;
   border-radius: 5px 90px 5px 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -138,7 +139,7 @@
   height: 90px;
   outline: none;
   border: none;
-  background: white;
+  background: black;
   border-radius: 5px 5px 5px 90px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -156,7 +157,7 @@
   height: 90px;
   outline: none;
   border: none;
-  background: white;
+  background: black;
   border-radius: 5px 5px 90px 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
