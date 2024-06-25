@@ -21,72 +21,74 @@ const Footer = () => {
       <div class="container text-center text-md-start">
         <div class="row text-center text-md-start">
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h5 class="text-uppercase mb-4 font-weight-bold ">Company</h5>
+            <h5 className={styles.h5}>Company</h5>
             <hr class="mb-4" />
-            <p>
-              At Paws & Play, we believe every wagging tail tells a story of
-              joy. As a family-run business dedicated to providing the highest
-              quality care for your furry best friends, we offer a range of
-              services designed to keep your dog happy, healthy, and full of
-              life.
+            <p className={styles.p}>
+              French Mochi Company est une entreprise familiale dédiée depuis
+              des décennies à la fabrication de mochis de haute qualité. Fondée
+              par des passionnés, elle utilise des ingrédients sélectionnés avec
+              soin pour offrir des mochis authentiques et délicieux. Leur
+              savoir-faire artisanal, transmis de génération en génération,
+              garantit des produits exceptionnels qui sont appréciés en France
+              et à l'international.
             </p>
           </div>
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h5 class="text-uppercase mb-4 font-weight-bold ">Features</h5>
+            <h5 className={styles.h5}>Features</h5>
             <hr class="mb-4" />
-            <p>
+            <p className={styles.p}>
               <a href="#">Automatic Financials</a>
             </p>
-            <p>
+            <p className={styles.p}>
               <a href="#">Strategic Planning</a>
             </p>
-            <p>
+            <p className={styles.p}>
               <a href="#">Expand</a>
             </p>
-            <p>
+            <p className={styles.p}>
               <a href="#">AI Assistant</a>
             </p>
           </div>
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h5 class="text-uppercase mb-4 font-weight-bold ">Resources</h5>
+            <h5 className={styles.h5}>Resources</h5>
             <hr class="mb-4" />
-            <p>
-              <a href="#">Blog</a>
+            <p className={styles.p}>
+              <a href="/blog">Blog</a>
             </p>
-            <p>
+            <p className={styles.p}>
               <a href="#">Partners</a>
             </p>
-            <p>
+            <p className={styles.p}>
               <a href="#">Public</a>
             </p>
-            <p>
+            <p className={styles.p}>
               <a href="#">Business Guide</a>
             </p>
           </div>
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h5 class="text-uppercase mb-4 font-weight-bold ">Contact</h5>
+            <h5 className={styles.h5}>Contact</h5>
             <hr class="mb-4" />
-            <p>
+            <p className={styles.p}>
               <FontAwesomeIcon icon={faHouse} /> Vitré
             </p>
-            <p>
+            <p className={styles.p}>
               <FontAwesomeIcon icon={faEnvelope} />
-              @gmail.com
+              mochi@gmail.com
             </p>{" "}
-            <p>
-              <FontAwesomeIcon icon={faPhone} /> 753 777 557
+            <p className={styles.p}>
+              <FontAwesomeIcon icon={faPhone} />+ 33 753 777 557
             </p>{" "}
-            <p>
-              <FontAwesomeIcon icon={faFax} /> 753 777 557
+            <p className={styles.p}>
+              <FontAwesomeIcon icon={faFax} /> + 33 753 777 557
             </p>{" "}
           </div>
 
           <hr class="mb-4" />
           <div class="text-center mb-2">
-            <p>
+            <p className={styles.copyright}>
               Copyright All Rights Reserved © 2024
               <a href="#">
                 <strong class="text-primary"></strong>

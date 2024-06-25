@@ -1,12 +1,16 @@
 .navbar {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
   transition: all 0.3s ease;
-  background-color: #000000;
+  background-color: #131313;
+  z-index: 1000;
 }
 
 .navbar:hover {
-  background-color: #212324;
+  background-color: black;
 }
 
 .brandName {
@@ -18,7 +22,7 @@
 
 .navLink {
   font-size: 1.1rem;
-  color: #fff !important;
+  color: #dccca3 !important;
   margin-left: 15px;
   transition: color 0.3s ease;
 }

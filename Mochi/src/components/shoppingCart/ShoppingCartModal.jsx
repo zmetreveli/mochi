@@ -5,7 +5,7 @@ const ShoppingCartModal = ({ items, onClose }) => {
   return (
     <div className={styles.modalContainer}>
       <div className={styles.modal}>
-        <h2>Carrito de Compras</h2>
+        <h2>Tu Carrito</h2>
         {items.length === 0 ? (
           <p>El carrito está vacío</p>
         ) : (

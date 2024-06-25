@@ -1,3 +1,4 @@
+/* Estilos generales */
 .pageContainer {
   display: flex;
   flex-direction: column;
@@ -20,6 +21,7 @@
 .viewCartButton:hover {
   background-color: #0056b3;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -27,17 +29,17 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
+  z-index: 999;
 }
 
 .closeButton {
   position: absolute;
-  top: 430px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
   font-size: 20px;
   cursor: pointer;
-  font-size: medium;
 }
 
 .cartContainer {
@@ -54,10 +56,8 @@
 .cartItem button {
   margin: 0 5px;
 }
-.overlay {
-  background-color: rgba(0, 0, 0, 0);
-}
-/* Menu.module.css */
+
+/* Estilos específicos para el modal */
 .backdrop {
   position: fixed;
   top: 0;
@@ -81,20 +81,43 @@
 }
 
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  height: 300px;
-  width: 25%;
+  width: 90%;
   max-width: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1001;
+  overflow-y: auto;
+  position: relative;
 }
 
 .button {
-  background-color: #0056b3;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #dccca3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease; /* Añade esta línea para la transición */
+}
+
+.button:hover {
+  background-color: #bca771;
+}
+
+li {
+  font-size: small;
+}
+
+/* Media queries para mejorar la responsividad */
+@media (min-width: 768px) {
+  .modal {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal {
+    width: 30%;
+  }
 }

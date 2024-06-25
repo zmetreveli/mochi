@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 ul {
   list-style: none;
 }
@@ -41,7 +45,7 @@ a {
   height: 50px;
   border-radius: 50%;
   color: #4d4d4d;
-  background-color: #fff;
+  /* background-color: #fff; */
   transition: all 0.3s ease-in-out;
 }
 .example2 .iconContent a:hover {
@@ -99,4 +103,14 @@ a {
 .footer {
   background-color: #131313;
   color: white;
+}
+
+.p {
+  font-size: small;
+}
+.h5 {
+  color: #dccca3;
+}
+.copyright {
+  font-size: x-small;
 }
