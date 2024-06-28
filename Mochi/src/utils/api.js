@@ -1,12 +1,13 @@
 import axios from "axios";
 
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+
 export const api = axios.create({
   baseURL: BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
 });
-
 export const createProduct = async (productData) => {
   try {
     const response = await api.post("/products", productData);
