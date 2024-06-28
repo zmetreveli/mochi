@@ -1,17 +1,15 @@
 .mainBox {
   display: flex;
-  flex-direction: column; /* Cambio clave aquí */
-  height: 1800px;
-  width: 100%;
+  flex-direction: column;
+  height: auto;
+  width: 100vw;
   background-color: #131313;
-  justify-content: center; /* Alinea verticalmente */
-  align-items: center; /* Alinea horizontalmente */
-  margin-top: 11%;
+  justify-content: center;
+  align-items: center;
 }
 
 .first {
   display: grid;
-  /* grid-template-columns: repeat(3 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1em;
   margin-top: 100px;
