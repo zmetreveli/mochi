@@ -9,6 +9,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 // import PricingBoard from "./components/pricing/PricingBoard";
 // import "antd/dist/antd.css";
 
+// *------modificacion -----------
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
+
           {/* <Route path="/pricing" element={<PricingBoard />} /> */}
         </Routes>
         <Footer />
