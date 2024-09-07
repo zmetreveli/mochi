@@ -6,6 +6,7 @@ import Menu from "./components/menu/Menu";
 import Contact from "./components/contact/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Cloudinary from "./components/pricing/Cloudinary";
 // import PricingBoard from "./components/pricing/PricingBoard";
 // import "antd/dist/antd.css";
 
@@ -19,8 +20,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
-
-          {/* <Route path="/pricing" element={<PricingBoard />} /> */}
+          <Route path="/pricing" element={<Cloudinary />} />
         </Routes>
         <Footer />
       </BrowserRouter>

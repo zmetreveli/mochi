@@ -11,7 +11,8 @@ const Menu = () => {
       name: "Mochi artesano de chocolate",
       description: "Delicioso mochi de chocolate artesanal",
       price: 10.99,
-      imgSrc: "https://www.muyjapones.com/wp-content/uploads/2020/03/Mochi.jpg",
+      imgSrc:
+        "https://scontent.cdninstagram.com/v/t51.29350-15/458296111_1014660053724495_2751736207044684401_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=wCK-uICaNoAQ7kNvgHn5SZe&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYAU5xn8l9PQ6p0YFAApXsEGhOq_o0wpVK8WSFPJpEMQrw&oe=66DFF1BD",
     },
     {
       id: 2,

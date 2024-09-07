@@ -120,7 +120,8 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className={styles.main}>
+      {/* -------------------- RED OF SOCIAL MEDIA  the ball------------------- */}
+      {/* <div className={styles.main}>
         <div className={styles.up}>
           <button
             className={styles.card1}
@@ -215,7 +216,7 @@ const Contact = () => {
             </svg>
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
