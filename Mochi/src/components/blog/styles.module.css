@@ -5,12 +5,13 @@
 }
 
 .mainBox {
-  width: clamp(10px, 100%, 1360px);
+  /* width: clamp(10px, 100%, 1360px); */
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   background-color: #131313;
   color: #fff;
+  margin-top: 136px;
 }
 
 .box1,
@@ -119,7 +120,7 @@
 }
 
 .book:hover .cover {
-  transition: all 0.5s;
+  transition: all 1s;
   transform: rotatey(-80deg);
 }
 

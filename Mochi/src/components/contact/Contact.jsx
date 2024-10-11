@@ -7,18 +7,121 @@ const Contact = () => {
   };
   return (
     <div className={styles.mainBox}>
-      <div className={styles.card} onClick={handleCall}>
-        <div className={styles.cardDate}>
-          <span className={styles.time}>14:34</span>
-          <span className={styles.date}>Mon 21 August</span>
-        </div>
-        <div className={styles.popup}>
-          <p className={styles.title}>Call to Mochi</p>
-          <p>+ 33 753 777 557</p>
+      <div className={styles.first}>
+        <div className={styles.inf}>
+          <h2>Contactez-Nous</h2>
+          <p>
+            Nous serions ravis de vous entendre! Que vous ayez une question sur
+            nos produits, des commentaires sur nos services, ou que vous vouliez
+            simplement dire bonjour, n'hésitez pas à nous contacter par l'un des
+            moyens ci-dessous.
+          </p>
+          <p>
+            Si vous souhaitez collaborer avec nous, nous serions également
+            heureux de discuter des opportunités de partenariat.
+          </p>
+
+          <h3>Support Client</h3>
+          <p>
+            <strong>Email:</strong>{" "}
+            <a href="mailto:mochifrance2024@gmail.com">
+              support@ourcompany.com
+            </a>
+          </p>
+          <p>
+            <strong>Téléphone:</strong> + 33 753 777 557
+          </p>
+          <p>
+            <strong>Heures:</strong> Lundi - Vendredi, 9h - 18h EST
+          </p>
+
+          <h3>Bureau Principal</h3>
+          <p>
+            <strong>Adresse:</strong>
+          </p>
+          <p>1 bis Bd Pierre Landais</p>
+          <p>35500 Vitré</p>
+          <p>France</p>
+          <p>
+            <strong>Téléphone:</strong> + 33 753 777 557
+          </p>
+          <p>
+            <strong>Fax:</strong> + 33 753 777 557
+          </p>
+
+          <h3>Demandes Commerciales</h3>
+          <p>
+            <strong>Email:</strong>{" "}
+            <a href="mailto:mochifrance2024@gmail.com">sales@ourcompany.com</a>
+          </p>
+          <p>
+            <strong>Téléphone:</strong> + 33 753 777 557
+          </p>
+          <p>
+            <strong>Heures:</strong> Lundi - Vendredi, 9h - 18h EST
+          </p>
+
+          <h3>Demandes Médias</h3>
+          <p>
+            <strong>Email:</strong>{" "}
+            <a href="mailto:mochifrance2024@gmail.com">media@ourcompany.com</a>
+          </p>
+          <p>
+            <strong>Téléphone:</strong> + 33 753 777 557
+          </p>
+          <p>
+            <strong>Heures:</strong> Lundi - Vendredi, 9h - 18h EST
+          </p>
+
+          <h3>Suivez-Nous</h3>
+          <p>
+            Restez connecté et à jour avec nos dernières nouvelles et offres.
+          </p>
+          <p>
+            <strong>Tik-Tok:</strong>{" "}
+            <a
+              href="https://www.tiktok.com/@mochi_france?_t=8nMTDqs0EYD&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tik-tok.com/ourcompany
+            </a>
+          </p>
+          <p>
+            <strong>Twitter:</strong>{" "}
+            <a
+              href="https://twitter.com/ourcompany"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              twitter.com/ourcompany
+            </a>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>{" "}
+            <a
+              href="https://linkedin.com/company/ourcompany"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/company/ourcompany
+            </a>
+          </p>
+          <p>
+            <strong>Instagram:</strong>{" "}
+            <a
+              href="https://www.instagram.com/mochi_france?igsh=YXk0YzM0OGh5Z2Np&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              instagram.com/ourcompany
+            </a>
+          </p>
         </div>
       </div>
 
-      <div className={styles.main}>
+      {/* -------------------- RED OF SOCIAL MEDIA  the ball------------------- */}
+      {/* <div className={styles.main}>
         <div className={styles.up}>
           <button
             className={styles.card1}
@@ -113,7 +216,7 @@ const Contact = () => {
             </svg>
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

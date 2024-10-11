@@ -76,13 +76,13 @@ const Footer = () => {
             </p>
             <p className={styles.p}>
               <FontAwesomeIcon icon={faEnvelope} />
-              @gmail.com
+              mochi@gmail.com
             </p>{" "}
             <p className={styles.p}>
-              <FontAwesomeIcon icon={faPhone} /> 753 777 557
+              <FontAwesomeIcon icon={faPhone} />+ 33 753 777 557
             </p>{" "}
             <p className={styles.p}>
-              <FontAwesomeIcon icon={faFax} /> 753 777 557
+              <FontAwesomeIcon icon={faFax} /> + 33 753 777 557
             </p>{" "}
           </div>
 
