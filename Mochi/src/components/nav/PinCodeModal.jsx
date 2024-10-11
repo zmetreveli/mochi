@@ -32,10 +32,16 @@ function PinCodeModal({ show, onClose, onSubmit }) {
         />
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={onClose}>
+        <Button
+          style={{ backgroundColor: "#dccca3", color: "white" }}
+          onClick={onClose}
+        >
           Close
         </Button>
-        <Button variant="primary" onClick={handleSubmit}>
+        <Button
+          style={{ backgroundColor: "#dccca3", color: "white" }}
+          onClick={handleSubmit}
+        >
           Submit
         </Button>
       </Modal.Footer>
