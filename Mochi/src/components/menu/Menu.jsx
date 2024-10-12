@@ -1,137 +1,124 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 import ProductList from "./ProductList";
+import IMG_0 from "../../assets/img/IMG_0.png";
+import IMG_1 from "../../assets/img/IMG_1.png";
+import IMG_2 from "../../assets/img/IMG_2.png";
+import IMG_3 from "../../assets/img/IMG_3.png";
+import IMG_4 from "../../assets/img/IMG_4.png";
+import IMG_5 from "../../assets/img/IMG_5.png";
+import IMG_6 from "../../assets/img/IMG_6.png";
+import IMG_7 from "../../assets/img/IMG_7.png";
+import IMG_8 from "../../assets/img/IMG_8.png";
+import IMG_9 from "../../assets/img/IMG_9.png";
+import IMG_10 from "../../assets/img/IMG_10.png";
+import IMG_11 from "../../assets/img/IMG_11.png";
+import IMG_12 from "../../assets/img/IMG_12.png";
+import IMG_13 from "../../assets/img/IMG_13.png";
+import IMG_14 from "../../assets/img/IMG_14.png";
+
 // import ShoppingCartModal from "../shoppingCart/ShoppingCartModal";
 const Menu = () => {
   const [shoppingList, setShoppingList] = useState([]);
   const [isShoppingCartModalOpen, setIsShoppingCartModalOpen] = useState(false);
   const products = [
     {
-      id: 1,
-      name: "Mochi artesano de chocolate",
-      description: "Delicioso mochi de chocolate artesanal",
-      price: 10.99,
-      imgSrc:
-        "https://media.istockphoto.com/id/1470199971/es/foto/comida-del-festival-qingming-chino.jpg?s=1024x1024&w=is&k=20&c=80I_vratWz2k5NYBH_VQ1VJF8ukHa1R7Nt9acwJ7reY=",
-    },
-    {
       id: 2,
       name: "Mochi artesanal de fresa deliciosa",
       description: "Mochi artesanal relleno de fresa algunas cositas mas",
       price: 12.99,
-      imgSrc:
-        "https://plus.unsplash.com/premium_photo-1700590072727-c98504929014?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imgSrc: IMG_0,
     },
     {
       id: 3,
       name: "Mochi artesanal de té verde",
       description: "Mochi de té verde con relleno dulce",
       price: 11.49,
-      imgSrc:
-        "https://media.istockphoto.com/id/608000958/es/foto/plato-dulce-con-guinda-verde.jpg?s=1024x1024&w=is&k=20&c=QItVv7O7YQHyBvvNwNiqK3rEscp_ORFR2sUelqoApIs=",
+      imgSrc: IMG_1,
     },
     {
-      id: 4,
-      name: "Mochi de sakura",
-      description: "Mochi de flor de cerezo tradicional japonés",
-      price: 9.99,
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2017/03/02/06/02/sakuramochi-2110491_1280.jpg",
-    },
-    {
-      id: 5,
+      id: 14,
       name: "Mochi de festival chino",
       description: "Tradicional mochi del festival chino",
       price: 13.99,
-      imgSrc:
-        "https://media.istockphoto.com/id/1470199971/es/foto/comida-del-festival-qingming-chino.jpg?s=1024x1024&w=is&k=20&c=80I_vratWz2k5NYBH_VQ1VJF8ukHa1R7Nt9acwJ7reY=",
+      imgSrc: IMG_3,
     },
     {
       id: 6,
       name: "Mochi multicolor",
       description: "Mochi japonés multicolor con helado",
       price: 14.99,
-      imgSrc:
-        "https://media.istockphoto.com/id/1158085114/es/foto/mochi-de-helado-japon%C3%A9s-multicolor-en-masa-de-arroz-y-flores-de-jazm%C3%ADn-sobre-un-fondo-azul-de.jpg?s=1024x1024&w=is&k=20&c=iL_MvtNNGgfuy2cY-fM1DlMeA-fMd1TZ0PjLkYPNy9s=",
+      imgSrc: IMG_4,
     },
     {
       id: 7,
       name: "Mochi de chocolate blanco",
       description: "Mochi artesanal de chocolate blanco",
       price: 11.99,
-      imgSrc:
-        "https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg",
+      imgSrc: IMG_5,
     },
     {
       id: 8,
       name: "Mochi de té verde premium",
       description: "Mochi de té verde premium",
       price: 15.99,
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2024/01/23/20/31/kashiwa-8528206_1280.png",
+      imgSrc: IMG_6,
     },
     {
       id: 1,
       name: "Mochi artesano de chocolate",
       description: "Delicioso mochi de chocolate artesanal",
       price: 10.99,
-      imgSrc: "https://www.muyjapones.com/wp-content/uploads/2020/03/Mochi.jpg",
+      imgSrc: IMG_7,
     },
     {
       id: 2,
       name: "Mochi artesanal de fresa deliciosa",
       description: "Mochi artesanal relleno de fresa algunas cositas mas",
       price: 12.99,
-      imgSrc:
-        "https://plus.unsplash.com/premium_photo-1700590072727-c98504929014?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imgSrc: IMG_8,
     },
     {
       id: 3,
       name: "Mochi artesanal de té verde",
       description: "Mochi de té verde con relleno dulce",
       price: 11.49,
-      imgSrc:
-        "https://media.istockphoto.com/id/608000958/es/foto/plato-dulce-con-guinda-verde.jpg?s=1024x1024&w=is&k=20&c=QItVv7O7YQHyBvvNwNiqK3rEscp_ORFR2sUelqoApIs=",
+      imgSrc: IMG_9,
     },
     {
       id: 4,
       name: "Mochi de sakura",
       description: "Mochi de flor de cerezo tradicional japonés",
       price: 9.99,
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2017/03/02/06/02/sakuramochi-2110491_1280.jpg",
+      imgSrc: IMG_10,
     },
     {
       id: 5,
       name: "Mochi de festival chino",
       description: "Tradicional mochi del festival chino",
       price: 13.99,
-      imgSrc:
-        "https://media.istockphoto.com/id/1470199971/es/foto/comida-del-festival-qingming-chino.jpg?s=1024x1024&w=is&k=20&c=80I_vratWz2k5NYBH_VQ1VJF8ukHa1R7Nt9acwJ7reY=",
+      imgSrc: IMG_11,
     },
     {
       id: 6,
       name: "Mochi multicolor",
       description: "Mochi japonés multicolor con helado",
       price: 14.99,
-      imgSrc:
-        "https://media.istockphoto.com/id/1158085114/es/foto/mochi-de-helado-japon%C3%A9s-multicolor-en-masa-de-arroz-y-flores-de-jazm%C3%ADn-sobre-un-fondo-azul-de.jpg?s=1024x1024&w=is&k=20&c=iL_MvtNNGgfuy2cY-fM1DlMeA-fMd1TZ0PjLkYPNy9s=",
+      imgSrc: IMG_12,
     },
     {
       id: 7,
       name: "Mochi de chocolate blanco",
       description: "Mochi artesanal de chocolate blanco",
       price: 11.99,
-      imgSrc:
-        "https://telemaki.com/130777-square_home_default/mochi-artesano-de-chocolate-blanco.jpg",
+      imgSrc: IMG_13,
     },
     {
       id: 8,
       name: "Mochi de té verde premium",
       description: "Mochi de té verde premium",
       price: 15.99,
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2024/01/23/20/31/kashiwa-8528206_1280.png",
+      imgSrc: IMG_5,
     },
   ];
   const handleOpenModal = () => {
@@ -150,6 +137,7 @@ const Menu = () => {
         shoppingList={shoppingList}
         setShoppingList={setShoppingList}
       />
+
       {/* <button onClick={handleOpenModal}>Ver Carrito</button>
       {isShoppingCartModalOpen && (
         <>

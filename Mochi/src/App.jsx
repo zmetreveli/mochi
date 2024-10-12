@@ -7,6 +7,7 @@ import Contact from "./components/contact/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cloudinary from "./components/pricing/Cloudinary";
+import { Navigate } from "react-router-dom";
 // import PricingBoard from "./components/pricing/PricingBoard";
 // import "antd/dist/antd.css";
 
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
+          <Route path="/" element={<Navigate to="/blog" replace />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
