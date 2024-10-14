@@ -1,17 +1,14 @@
 import React from "react";
 import styles from "./ProductCard.module.css";
+// import ShoppingCartModal from "../shoppingCart/ShoppingCartModal";
 
 const handleWhatsAppClick = () => {
-  // Número de teléfono y mensaje
-  const phoneNumber = "+33753777557"; // Reemplaza con el número de teléfono
-  const message = "Bonjour, je voudrais passer une commande."; // Reemplaza con tu mensaje
-
-  // Construcción del enlace
+  const phoneNumber = "+33753777557";
+  const message = "Bonjour, je voudrais passer une commande.";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
   )}`;
 
-  // Redirección a WhatsApp
   window.open(whatsappLink, "_blank");
 };
 
@@ -27,7 +24,7 @@ const ProductCard = ({ product, addToCart }) => {
         <h5 className={styles.name}>{product.name}</h5>
         <p className={styles.description}>{product.description}</p>
         <div className={styles.bottom}>
-          <span className={styles.price}>${product.price}</span>
+          <span className={styles.price}>€{product.price.toFixed(2)}</span>
           <button
             onClick={() => handleWhatsAppClick(product)}
             className={styles.addToCart}

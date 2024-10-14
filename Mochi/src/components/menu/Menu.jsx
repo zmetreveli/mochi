@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 import ProductList from "./ProductList";
+// import ShoppingCartModal from "../shoppingCart/ShoppingCartModal";
 import IMG_0 from "../../assets/img/IMG_0.png";
-import IMG_1 from "../../assets/img/IMG_1.png";
 import IMG_2 from "../../assets/img/IMG_2.png";
 import IMG_3 from "../../assets/img/IMG_3.png";
 import IMG_4 from "../../assets/img/IMG_4.png";
@@ -17,118 +17,120 @@ import IMG_12 from "../../assets/img/IMG_12.png";
 import IMG_13 from "../../assets/img/IMG_13.png";
 import IMG_14 from "../../assets/img/IMG_14.png";
 
-// import ShoppingCartModal from "../shoppingCart/ShoppingCartModal";
 const Menu = () => {
   const [shoppingList, setShoppingList] = useState([]);
-  const [isShoppingCartModalOpen, setIsShoppingCartModalOpen] = useState(false);
+  // const [isShoppingCartModalOpen, setIsShoppingCartModalOpen] = useState(false);
+  const [cart, setCart] = useState([]);
   const products = [
     {
-      id: 2,
-      name: "Mochi artesanal de fresa deliciosa",
-      description: "Mochi artesanal relleno de fresa algunas cositas mas",
-      price: 12.99,
+      id: 0,
+      name: "Tiramisu",
+      description: "Mochi de té verde premium",
+      price: 3.5,
       imgSrc: IMG_0,
     },
     {
-      id: 3,
-      name: "Mochi artesanal de té verde",
+      id: 2,
+      name: "Speculoos",
       description: "Mochi de té verde con relleno dulce",
-      price: 11.49,
-      imgSrc: IMG_1,
+      price: 3.0,
+      imgSrc: IMG_2,
     },
     {
-      id: 14,
-      name: "Mochi de festival chino",
+      id: 3,
+      name: "Mangue aux fruit de passion",
       description: "Tradicional mochi del festival chino",
-      price: 13.99,
+      price: 3.0,
       imgSrc: IMG_3,
     },
     {
-      id: 6,
-      name: "Mochi multicolor",
+      id: 4,
+      name: "Pina colada",
       description: "Mochi japonés multicolor con helado",
-      price: 14.99,
+      price: 3.0,
       imgSrc: IMG_4,
     },
     {
-      id: 7,
-      name: "Mochi de chocolate blanco",
-      description: "Mochi artesanal de chocolate blanco",
-      price: 11.99,
-      imgSrc: IMG_5,
-    },
-    {
-      id: 8,
-      name: "Mochi de té verde premium",
+      id: 14,
+      name: "Milkshake aux framboiss",
       description: "Mochi de té verde premium",
-      price: 15.99,
-      imgSrc: IMG_6,
-    },
-    {
-      id: 1,
-      name: "Mochi artesano de chocolate",
-      description: "Delicioso mochi de chocolate artesanal",
-      price: 10.99,
-      imgSrc: IMG_7,
-    },
-    {
-      id: 2,
-      name: "Mochi artesanal de fresa deliciosa",
-      description: "Mochi artesanal relleno de fresa algunas cositas mas",
-      price: 12.99,
-      imgSrc: IMG_8,
-    },
-    {
-      id: 3,
-      name: "Mochi artesanal de té verde",
-      description: "Mochi de té verde con relleno dulce",
-      price: 11.49,
-      imgSrc: IMG_9,
-    },
-    {
-      id: 4,
-      name: "Mochi de sakura",
-      description: "Mochi de flor de cerezo tradicional japonés",
-      price: 9.99,
-      imgSrc: IMG_10,
+      price: 3.0,
+      imgSrc: IMG_14,
     },
     {
       id: 5,
-      name: "Mochi de festival chino",
-      description: "Tradicional mochi del festival chino",
-      price: 13.99,
-      imgSrc: IMG_11,
+      name: "Grosseilles rouges",
+      description: "Mochi artesanal de chocolate blanco",
+      price: 3.0,
+      imgSrc: IMG_5,
     },
     {
       id: 6,
-      name: "Mochi multicolor",
-      description: "Mochi japonés multicolor con helado",
-      price: 14.99,
-      imgSrc: IMG_12,
+      name: "Banane a pate de noisette",
+      description: "Mochi de té verde premium",
+      price: 3.0,
+      imgSrc: IMG_6,
     },
     {
       id: 7,
-      name: "Mochi de chocolate blanco",
-      description: "Mochi artesanal de chocolate blanco",
-      price: 11.99,
-      imgSrc: IMG_13,
+      name: "Ferrero",
+      description: "Delicioso mochi de chocolate artesanal",
+      price: 3.5,
+      imgSrc: IMG_7,
     },
     {
       id: 8,
-      name: "Mochi de té verde premium",
-      description: "Mochi de té verde premium",
-      price: 15.99,
-      imgSrc: IMG_5,
+      name: "Raffaello",
+      description: "Mochi artesanal relleno de fresa algunas cositas mas",
+      price: 3.5,
+      imgSrc: IMG_8,
+    },
+    {
+      id: 9,
+      name: "Mangue aux fraises",
+      description: "Mochi de té verde con relleno dulce",
+      price: 3.0,
+      imgSrc: IMG_9,
+    },
+    {
+      id: 10,
+      name: "Fraise a la manthe",
+      description: "Mochi de flor de cerezo tradicional japonés",
+      price: 3.0,
+      imgSrc: IMG_10,
+    },
+    {
+      id: 11,
+      name: "Oreo",
+      description: "Tradicional mochi del festival chino",
+      price: 3.0,
+      imgSrc: IMG_11,
+    },
+    {
+      id: 12,
+      name: "Mangue a la vanille",
+      description: "Mochi japonés multicolor con helado",
+      price: 3.0,
+      imgSrc: IMG_12,
+    },
+    {
+      id: 13,
+      name: "Milkshake aux fraises",
+      description: "Mochi artesanal de chocolate blanco",
+      price: 3.0,
+      imgSrc: IMG_13,
     },
   ];
-  const handleOpenModal = () => {
-    setIsShoppingCartModalOpen(true);
-  };
+  // const handleOpenModal = () => {
+  //   setIsShoppingCartModalOpen(true);
+  // };
 
-  const handleCloseModal = () => {
-    setIsShoppingCartModalOpen(false);
+  // const handleCloseModal = () => {
+  //   setIsShoppingCartModalOpen(false);
+  // };
+  const addToCart = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
   };
-
   return (
     <div>
       <ProductList
