@@ -39,7 +39,10 @@ function NavBar() {
           <img src={logo} width="80" height="110" alt="Mochi" />
           <span className={styles.brandName}></span>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          className={styles.toggle}
+          aria-controls="basic-navbar-nav"
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link as={Link} to="/blog" className={styles.navLink}>

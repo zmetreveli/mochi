@@ -12,7 +12,11 @@
 .navbar:hover {
   background-color: black;
 }
-
+.toggle {
+  background-color: #dccca3 !important;
+  border: none !important;
+  stroke: red !important;
+}
 .brandName {
   font-size: 1.5rem;
   font-weight: bold;
