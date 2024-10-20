@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
-import logo from "../../assets/logo/logo.png";
+import logoFinal from "../../assets/logo/logoFinal.png";
 import ShoppingCartModal from "../shoppingCart/ShoppingCartModal";
 import PinCodeModal from "../nav/PinCodeModal"; // Importa el nuevo modal
 
@@ -36,7 +36,7 @@ function NavBar() {
     <Navbar className={`${styles.navbar}`} expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/blog">
-          <img src={logo} width="80" height="110" alt="Mochi" />
+          <img src={logoFinal} width="120" height="120" alt="Mochi" />
           <span className={styles.brandName}></span>
         </Navbar.Brand>
         <Navbar.Toggle
