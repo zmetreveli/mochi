@@ -1,90 +1,121 @@
-* {
-  margin: 0;
-  padding: 0;
+.footer {
+  background-color: #131313;
+  color: #fff;
+  width: 100%;
+  padding: 24px 12px;
 }
-ul {
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Texto */
+.p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.h5 {
+  color: #dccca3;
+  margin-bottom: 4px;
+}
+.copyright {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* Lista de enlaces (scoped, no global) */
+.list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
 }
-a {
-  color: white !important;
+.link {
+  color: #ddd;
+  text-decoration: none;
 }
-.example2 {
+.link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Redes sociales */
+.social {
+  list-style: none;
   display: flex;
+  gap: 14px;
   justify-content: center;
   align-items: center;
+  padding: 8px 0 0;
+  margin: 0;
+  flex-wrap: wrap; /* responsive */
 }
-.example2 .iconContent {
-  margin: 0 10px;
+
+.iconItem {
   position: relative;
 }
-.example2 .iconContent .tooltip {
+
+.tooltip {
   position: absolute;
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
   padding: 6px 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   opacity: 0;
   visibility: hidden;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  font-size: 12px;
+  transition: all 0.25s ease;
+  pointer-events: none;
+  white-space: nowrap;
 }
-.example2 .iconContent:hover .tooltip {
+
+.iconItem:hover .tooltip {
   opacity: 1;
   visibility: visible;
-  top: -50px;
+  top: -44px;
 }
-.example2 .iconContent a {
+
+.iconLink {
   position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  color: #4d4d4d;
-  /* background-color: #fff; */
-  transition: all 0.3s ease-in-out;
+  color: #f2f2f2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: box-shadow 0.25s ease, transform 0.05s ease;
 }
-.example2 .iconContent a:hover {
-  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+
+.iconLink:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
 }
-.example2 .iconContent a svg {
-  position: relative;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-}
-.example2 .iconContent a:hover {
-  color: white;
-}
-.example2 .iconContent a .filled {
+
+.iconLink .filled {
   position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #000;
-  transition: all 0.3s ease-in-out;
+  inset: auto 0 0 0;
+  height: 0%;
+  transition: height 0.25s ease;
+  background: #000;
+  z-index: 0;
 }
-.example2 .iconContent a:hover .filled {
+
+.iconLink:hover .filled {
   height: 100%;
 }
-
-.example2 .iconContent a[data-social="linkedin"] .filled,
-.example2 .iconContent a[data-social="linkedin"] ~ .tooltip {
-  background-color: #0274b3;
+.iconLink svg {
+  position: relative;
+  z-index: 1;
 }
 
-.example2 .iconContent a[data-social="github"] .filled,
-.example2 .iconContent a[data-social="github"] ~ .tooltip {
-  background-color: #24262a;
-}
-.example2 .iconContent a[data-social="instagram"] .filled,
-.example2 .iconContent a[data-social="instagram"] ~ .tooltip {
+/* Colores por red */
+.iconLink[data-social="instagram"] .filled {
   background: linear-gradient(
     45deg,
     #405de6,
@@ -95,22 +126,19 @@ a {
     #fd1f1f
   );
 }
-.example2 .iconContent a[data-social="youtube"] .filled,
-.example2 .iconContent a[data-social="youtube"] ~ .tooltip {
-  background-color: #ff0000;
+.iconLink[data-social="youtube"] .filled {
+  background: #ff0000;
 }
 
-.footer {
-  background-color: #131313;
-  color: white;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .p {
+    font-size: 0.95rem;
+  }
 }
 
-.p {
-  font-size: small;
-}
-.h5 {
-  color: #dccca3;
-}
-.copyright {
-  font-size: x-small;
+@media (max-width: 576px) {
+  .p {
+    font-size: 0.9rem;
+  }
 }

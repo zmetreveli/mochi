@@ -6,30 +6,18 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 import logoFinal from "../../assets/logo/logoFinal.png";
 import ShoppingCartModal from "../shoppingCart/ShoppingCartModal";
-import PinCodeModal from "../nav/PinCodeModal"; // Importa el nuevo modal
 
 function NavBar() {
   const [shoppingList, setShoppingList] = useState([]);
   const [isShoppingCartModalOpen, setIsShoppingCartModalOpen] = useState(false);
-  const [isPinModalOpen, setIsPinModalOpen] = useState(false);
-  const navigate = useNavigate(); // Para redirigir
+  const navigate = useNavigate();
 
-  const handleOpenModal = () => {
-    setIsShoppingCartModalOpen(true);
-  };
+  const handleOpenModal = () => setIsShoppingCartModalOpen(true);
+  const handleCloseModal = () => setIsShoppingCartModalOpen(false);
 
-  const handleCloseModal = () => {
-    setIsShoppingCartModalOpen(false);
-  };
-
-  const handlePricingClick = (e) => {
-    e.preventDefault(); // Evitar redireccionamiento inmediato
-    setIsPinModalOpen(true); // Mostrar el modal del PIN
-  };
-
-  const handlePinSubmit = () => {
-    setIsPinModalOpen(false); // Cerrar el modal
-    navigate("/pricing"); // Redirigir a la página de precios
+  const goAdmin = (e) => {
+    e.preventDefault();
+    navigate("/admin");
   };
 
   return (
@@ -39,6 +27,7 @@ function NavBar() {
           <img src={logoFinal} width="120" height="120" alt="Mochi" />
           <span className={styles.brandName}></span>
         </Navbar.Brand>
+
         <Navbar.Toggle
           className={styles.toggle}
           aria-controls="basic-navbar-nav"
@@ -51,18 +40,23 @@ function NavBar() {
             <Nav.Link as={Link} to="/menu" className={styles.navLink}>
               Menu
             </Nav.Link>
-            <Nav.Link
-              href="/pricing"
-              onClick={handlePricingClick}
-              className={styles.navLink}
-            >
-              Pricing
-            </Nav.Link>
             <Nav.Link as={Link} to="/contact" className={styles.navLink}>
               Contact
             </Nav.Link>
+
+            {/* 🔐 Admin (discreto) */}
+            <Nav.Link
+              href="/admin"
+              onClick={goAdmin}
+              className={styles.navLink}
+              style={{ opacity: 0.6, marginLeft: "auto" }}
+              title="Admin"
+            >
+              Admin
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+
         <div>
           <svg
             onClick={handleOpenModal}
@@ -86,11 +80,6 @@ function NavBar() {
           )}
         </div>
       </Container>
-      <PinCodeModal
-        show={isPinModalOpen}
-        onClose={() => setIsPinModalOpen(false)}
-        onSubmit={handlePinSubmit}
-      />
     </Navbar>
   );
 }

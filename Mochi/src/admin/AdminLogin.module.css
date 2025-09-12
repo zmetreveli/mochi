@@ -1,0 +1,89 @@
+:root {
+  --nav-h: 0px;
+} /* pon 80px si tu NavBar es fixed y alta */
+
+/* FONDO negro a ancho completo y centrado vertical/horizontal */
+.loginPage {
+  width: 100vw; /* ancho pantalla */
+  min-height: calc(100svh - var(--nav-h));
+  margin: 0; /* sin margen */
+  margin-top: var(--nav-h);
+  background: #000;
+
+  display: grid;
+  place-items: center;
+
+  padding: clamp(16px, 3vw, 40px);
+  overflow-x: hidden; /* evita scroll lateral en móviles */
+}
+
+/* FORM con ancho responsive real */
+.loginForm {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: clamp(24px, 3vw, 36px);
+
+  /* ancho responsive: crece con la pantalla pero con límites */
+  width: clamp(320px, 50vw, 720px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  color: #f5f5f5;
+}
+
+.loginForm h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  text-align: center;
+  color: #dccca3;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: #1a1a1a;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-size: clamp(0.95rem, 1.2vw, 1rem);
+}
+.input:focus {
+  border-color: #7c5cff;
+  box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.2);
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #7c5cff, #5c3de0);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, filter 0.2s ease;
+  font-size: clamp(0.95rem, 1.2vw, 1rem);
+}
+.button:hover {
+  filter: brightness(1.08);
+}
+.button:active {
+  transform: translateY(1px);
+}
+
+.error {
+  margin-top: 10px;
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Ultra-wide */
+@media (min-width: 1600px) {
+  .loginForm {
+    width: clamp(360px, 40vw, 820px);
+  }
+}
