@@ -5,7 +5,7 @@
 }
 
 .mainBox {
-  /* width: clamp(10px, 100%, 1360px); */
+  width: clamp(10px, 100%, 2360px);
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -26,12 +26,12 @@
   max-width: 700px;
   max-height: 700px;
 }
-
 .imageArticle {
   width: 100%;
   max-width: 400px;
   height: auto;
-  margin-top: 20px;
+  margin: 20px auto 0;
+  display: block;
 }
 
 @media (min-width: 768px) {

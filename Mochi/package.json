@@ -33,8 +33,10 @@
     "react-bootstrap": "^2.10.2",
     "react-cool-onclickoutside": "^1.7.0",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.2",
     "react-modal": "^3.16.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.28.0",
+    "react-spinners": "^0.14.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

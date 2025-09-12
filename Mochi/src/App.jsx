@@ -10,6 +10,9 @@ import Cloudinary from "./components/pricing/Cloudinary";
 import { Navigate } from "react-router-dom";
 // import PricingBoard from "./components/pricing/PricingBoard";
 // import "antd/dist/antd.css";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root"); // Asegúrate de que "root" es el ID del div en tu HTML principal
 
 // *------modificacion -----------
 function App() {

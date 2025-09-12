@@ -20,8 +20,8 @@ function PinCodeModal({ show, onClose, onSubmit }) {
 
   return (
     <Modal show={show} onHide={onClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>Enter PIN Code</Modal.Title>
+      <Modal.Header>
+        <Modal.Title>Entrez le code PIN</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <input
@@ -33,16 +33,31 @@ function PinCodeModal({ show, onClose, onSubmit }) {
       </Modal.Body>
       <Modal.Footer>
         <Button
-          style={{ backgroundColor: "#dccca3", color: "white" }}
+          className="btn btn-light"
+          style={{
+            backgroundColor: "#dccca3",
+            color: "white",
+            borderColor: "white",
+          }}
+          onMouseEnter={(e) => (e.target.style.backgroundColor = "#b8a178")}
+          onMouseLeave={(e) => (e.target.style.backgroundColor = "#dccca3")}
           onClick={onClose}
         >
-          Close
+          Fermer
         </Button>
+
         <Button
-          style={{ backgroundColor: "#dccca3", color: "white" }}
+          className="btn btn-light"
+          style={{
+            backgroundColor: "#dccca3",
+            color: "white",
+            borderColor: "white",
+          }}
+          onMouseEnter={(e) => (e.target.style.backgroundColor = "#b8a178")}
+          onMouseLeave={(e) => (e.target.style.backgroundColor = "#dccca3")}
           onClick={handleSubmit}
         >
-          Submit
+          Soumettre
         </Button>
       </Modal.Footer>
     </Modal>
