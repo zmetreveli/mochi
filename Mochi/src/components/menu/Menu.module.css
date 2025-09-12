@@ -1,0 +1,20 @@
+.menuPage {
+  /* full-bleed: ocupa todo el ancho de la ventana aunque el padre tenga max-width */
+  background: #131313;
+  width: 100vw;
+  min-height: 100svh;
+  /* separaciones responsivas */
+  padding-top: clamp(
+    80px,
+    10vw,
+    140px
+  ); /* si tienes navbar fija, sirve de margen superior */
+  padding-bottom: clamp(24px, 4vw, 48px);
+}
+
+/* contenedor interno opcional para centrar el contenido y limitar el ancho */
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 2vw, 24px);
+}
