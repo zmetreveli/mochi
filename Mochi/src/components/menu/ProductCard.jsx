@@ -25,12 +25,12 @@ const ProductCard = ({ product, addToCart }) => {
         <p className={styles.description}>{product.description}</p>
         <div className={styles.bottom}>
           <span className={styles.price}>€{product.price.toFixed(2)}</span>
-          <button
+          {/* <button
             onClick={() => handleWhatsAppClick(product)}
             className={styles.addToCart}
           >
             +
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

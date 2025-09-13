@@ -81,6 +81,18 @@
   text-align: center;
 }
 
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+.remember input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
 /* Ultra-wide */
 @media (min-width: 1600px) {
   .loginForm {
