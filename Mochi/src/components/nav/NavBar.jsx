@@ -10,6 +10,10 @@ import ShoppingCartModal from "../shoppingCart/ShoppingCartModal";
 function NavBar() {
   const [shoppingList, setShoppingList] = useState([]);
   const [isShoppingCartModalOpen, setIsShoppingCartModalOpen] = useState(false);
+
+  // 👇 controla el estado abierto/cerrado del menú
+  const [expanded, setExpanded] = useState(false);
+
   const navigate = useNavigate();
 
   const handleOpenModal = () => setIsShoppingCartModalOpen(true);
@@ -18,12 +22,19 @@ function NavBar() {
   const goAdmin = (e) => {
     e.preventDefault();
     navigate("/admin");
+    setExpanded(false); // 👈 cerrar menú tras ir a admin
   };
 
   return (
-    <Navbar className={`${styles.navbar}`} expand="lg">
+    <Navbar
+      className={`${styles.navbar}`}
+      expand="lg"
+      collapseOnSelect
+      expanded={expanded} // 👈 controlado
+      onToggle={(next) => setExpanded(next)} // 👈 sincroniza con el toggle
+    >
       <Container>
-        <Navbar.Brand as={Link} to="/blog">
+        <Navbar.Brand as={Link} to="/blog" onClick={() => setExpanded(false)}>
           <img src={logoFinal} width="120" height="120" alt="Mochi" />
           <span className={styles.brandName}></span>
         </Navbar.Brand>
@@ -32,22 +43,41 @@ function NavBar() {
           className={styles.toggle}
           aria-controls="basic-navbar-nav"
         />
+
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link as={Link} to="/blog" className={styles.navLink}>
+          <Nav className="ms-auto">
+            {/* antes tenías ml-auto; en BS5 es ms-auto */}
+            <Nav.Link
+              as={Link}
+              to="/blog"
+              className={styles.navLink}
+              onClick={() => setExpanded(false)} // 👈 cerrar al click
+            >
               Blog
             </Nav.Link>
-            <Nav.Link as={Link} to="/menu" className={styles.navLink}>
+
+            <Nav.Link
+              as={Link}
+              to="/menu"
+              className={styles.navLink}
+              onClick={() => setExpanded(false)}
+            >
               Menu
             </Nav.Link>
-            <Nav.Link as={Link} to="/contact" className={styles.navLink}>
+
+            <Nav.Link
+              as={Link}
+              to="/contact"
+              className={styles.navLink}
+              onClick={() => setExpanded(false)}
+            >
               Contact
             </Nav.Link>
 
             {/* 🔐 Admin (discreto) */}
             <Nav.Link
               href="/admin"
-              onClick={goAdmin}
+              onClick={goAdmin} // navega + cierra
               className={styles.navLink}
               style={{ opacity: 0.6, marginLeft: "auto" }}
               title="Admin"
