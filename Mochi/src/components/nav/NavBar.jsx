@@ -25,6 +25,8 @@ function NavBar() {
     setExpanded(false); // 👈 cerrar menú tras ir a admin
   };
 
+  // done
+
   return (
     <Navbar
       className={`${styles.navbar}`}
