@@ -52,6 +52,27 @@
   transition: color 0.3s ease;
 }
 
+.recettesPage {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.recettesPage h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.recette {
+  margin-bottom: 2.5rem;
+}
+
+.recette img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
 .navbar-brand img {
   border-radius: 50%;
   transition: transform 0.3s ease;
