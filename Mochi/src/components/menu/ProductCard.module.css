@@ -47,23 +47,28 @@
 }
 
 .addToCart {
-  background-color: #d87b1d;
   border: none;
-  border-radius: 10px;
-  color: white;
+  border-radius: 6px; /* 🔳 esquinas cuadradas con un poquito de suavidad */
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
   cursor: pointer;
-  font-size: -1.5rem;
-  height: 45px;
-  transition: 0.2s;
-  width: 60px;
+  background: #b8a576;
+  color: #fff;
+  transition: background 0.2s, transform 0.1s;
 }
 
 .addToCart:hover {
-  transform: scale(1.25);
+  background: #444; /* un poco más claro al pasar el ratón */
 }
 
 .addToCart:active {
-  transform: scale(0.85);
+  transform: scale(0.95);
 }
 
 /* Media Queries para diseño responsivo */
