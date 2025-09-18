@@ -55,6 +55,14 @@ function NavBar() {
             </Nav.Link>
             <Nav.Link
               as={Link}
+              to="/recettes"
+              className={styles.navLink}
+              onClick={() => setExpanded(false)}
+            >
+              Recettes
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
               to="/menu"
               className={styles.navLink}
               onClick={() => setExpanded(false)}

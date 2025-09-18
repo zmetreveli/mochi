@@ -10,7 +10,7 @@ import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import Modal from "react-modal";
 import { supabase } from "./lib/supabase";
 import AdminGate from "./admin/AdminGate";
-
+import Recettes from "./components/recettes/Recettes";
 // 👇 nuevo
 import { CartProvider } from "./components/context/CartContext";
 
@@ -41,6 +41,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/blog" replace />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/recettes" element={<Recettes />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<AdminGate />} />

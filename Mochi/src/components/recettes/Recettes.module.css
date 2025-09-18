@@ -1,0 +1,95 @@
+.recettesPage {
+  /* 👇 offset superior para que no lo tape el navbar */
+  padding-top: 200px; /* móvil por defecto (ajústalo si tu navbar es más alto) */
+
+  background-color: #131313;
+  color: #f5f5f5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  width: 100vw;
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.recettesPage h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #dccca3; /* blanco puro para destacar */
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  color: #d9d9d9;
+}
+
+.recette {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #1c1c1c; /* bloque gris oscuro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.recette:hover {
+  transform: translateY(-4px); /* pequeño efecto hover */
+}
+
+.recette h2 {
+  color: #dccca3; /* marrón */
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.recette p {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: #e6e6e6;
+}
+
+.recette img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1rem 0;
+  display: block;
+}
+
+/* --- Versión especial para la 1ª recette --- */
+.recetteGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textBlock {
+  font-size: 1.2rem; /* texto más grande */
+  color: #f0f0f0;
+  line-height: 1.7;
+}
+
+/* Solo en pantallas grandes → dos columnas */
+@media (min-width: 768px) {
+  .recetteGrid {
+    flex-direction: row; /* imagen y texto en fila */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .textBlock {
+    flex: 1;
+    font-size: 1.3rem; /* texto más grande en desktop */
+    padding-right: 1rem;
+  }
+
+  .imageGrid {
+    flex: 1;
+    max-width: 50%; /* imagen ocupa mitad */
+    border-radius: 12px;
+  }
+}
