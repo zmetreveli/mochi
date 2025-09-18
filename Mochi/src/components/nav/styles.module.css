@@ -24,6 +24,27 @@
   margin-left: 10px;
 }
 
+.cartWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.badge {
+  position: absolute;
+  top: 35px; /* lo sube un poco por encima del ícono */
+  right: 35px; /* lo mueve casi encima del borde derecho del ícono */
+  background: #e63946;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 6px;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+  pointer-events: none; /* evita que tape el click del carrito */
+}
+
 .navLink {
   font-size: 1.1rem;
   color: #dccca3 !important;

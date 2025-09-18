@@ -46,12 +46,12 @@ export default function ShoppingCartModal({ onClose }) {
     return (
       <div className={styles.panel}>
         <div className={styles.header}>
-          <h3>Tu carrito</h3>
+          <h3>Votre panier</h3>
           <button type="button" className={styles.close} onClick={onClose}>
             ×
           </button>
         </div>
-        <div className={styles.empty}>Tu carrito está vacío.</div>
+        <div className={styles.empty}>Votre panier est vide.</div>
       </div>
     );
   }
@@ -59,67 +59,73 @@ export default function ShoppingCartModal({ onClose }) {
   return (
     <div className={styles.panel}>
       <div className={styles.header}>
-        <h3>Tu carrito</h3>
+        <h3>Votre panier</h3>
         <button type="button" className={styles.close} onClick={onClose}>
           ×
         </button>
       </div>
 
-      <div className={styles.list}>
-        {items.map((it) => (
-          <div key={it.id} className={styles.row}>
-            <div className={styles.info}>
-              <div className={styles.name}>{it.name}</div>
-              <div className={styles.price}>€{it.price.toFixed(2)}</div>
-            </div>
+      {items.length === 0 ? (
+        <div className={styles.empty}>Votre panier est vide.</div>
+      ) : (
+        <>
+          <div className={styles.list}>
+            {items.map((it) => (
+              <div key={it.id} className={styles.row}>
+                <div className={styles.info}>
+                  <div className={styles.name}>{it.name}</div>
+                  <div className={styles.price}>{it.price.toFixed(2)} €</div>
+                </div>
 
-            <div className={styles.qty}>
-              <button
-                type="button"
-                className={styles.btn}
-                onClick={() => removeOne(it.id)}
-                aria-label={`Restar 1 ${it.name}`}
-                title="−"
-              >
-                −
-              </button>
-              <span className={styles.amount}>{it.amount}</span>
-              <button
-                type="button"
-                className={styles.btn}
-                onClick={() => add(it)}
-                aria-label={`Añadir 1 ${it.name}`}
-                title="+"
-              >
-                +
-              </button>
-            </div>
+                <div className={styles.qty}>
+                  <button
+                    type="button"
+                    className={styles.btn}
+                    onClick={() => removeOne(it.id)}
+                    aria-label={`Retirer 1 ${it.name}`}
+                    title="−"
+                  >
+                    −
+                  </button>
+                  <span className={styles.amount}>{it.amount}</span>
+                  <button
+                    type="button"
+                    className={styles.btn}
+                    onClick={() => add(it)}
+                    aria-label={`Ajouter 1 ${it.name}`}
+                    title="+"
+                  >
+                    +
+                  </button>
+                </div>
 
-            <div className={styles.subtotal}>
-              €{(it.price * it.amount).toFixed(2)}
-            </div>
+                <div className={styles.subtotal}>
+                  {(it.price * it.amount).toFixed(2)} €
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <div className={styles.footer}>
-        <button type="button" className={styles.clear} onClick={clear}>
-          Vaciar
-        </button>
+          <div className={styles.footer}>
+            <button type="button" className={styles.clear} onClick={clear}>
+              Vider
+            </button>
 
-        <div className={styles.total}>
-          <span>Total</span>
-          <strong>€{total.toFixed(2)}</strong>
-        </div>
+            <div className={styles.total}>
+              <span>Total</span>
+              <strong>{total.toFixed(2)} €</strong>
+            </div>
 
-        <button
-          type="button"
-          className={styles.checkout}
-          onClick={handleCheckoutWhatsApp}
-        >
-          Finalizar pedido por WhatsApp
-        </button>
-      </div>
+            <button
+              type="button"
+              className={styles.checkout}
+              onClick={handleCheckoutWhatsApp}
+            >
+              Finaliser la commande par WhatsApp
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 }

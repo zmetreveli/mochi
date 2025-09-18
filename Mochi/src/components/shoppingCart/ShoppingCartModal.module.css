@@ -21,15 +21,65 @@
   justify-content: space-between;
 }
 
+/* Botón de cerrar (X) */
 .close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
   border: none;
-  background: #222;
+  border-radius: 6px; /* 👈 cuadrado con esquinas suaves */
+  background: #b8a576;
   color: #fff;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
   font-size: 20px;
+  line-height: 1;
   cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.close:hover {
+  background: #444;
+}
+
+.close:active {
+  transform: scale(0.95);
+}
+
+/* Botones + y - */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 6px; /* 👈 igual estilo que el X */
+  background: #b8a576;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: #444;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Cantidad (número entre los botones) */
+.amount {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .empty {
@@ -81,18 +131,6 @@
   padding: 4px;
 }
 
-.btn {
-  border: none;
-  background: #222;
-  color: #fff;
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  font-size: 18px;
-  line-height: 1;
-  cursor: pointer;
-}
-
 .amount {
   min-width: 20px;
   text-align: center;
@@ -111,9 +149,9 @@
 }
 
 .clear {
-  border: 1px solid #333;
   background: transparent;
-  color: #ccc;
+  background-color: #b8a576;
+  color: white;
   border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
