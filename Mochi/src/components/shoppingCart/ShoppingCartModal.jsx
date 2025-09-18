@@ -11,7 +11,7 @@ export default function ShoppingCartModal({ onClose }) {
   );
 
   // ✅ Número de WhatsApp sin "+" ni espacios
-  const WHATSAPP_NUMBER = "34633022828";
+  const WHATSAPP_NUMBER = "33753777557";
 
   // ✅ Handler: abre WhatsApp con el pedido completo
   function handleCheckoutWhatsApp() {
