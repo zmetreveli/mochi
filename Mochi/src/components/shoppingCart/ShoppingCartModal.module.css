@@ -1,0 +1,137 @@
+.panel {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  bottom: 16px;
+  width: min(420px, 90vw);
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close {
+  border: none;
+  background: #222;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.empty {
+  background: #151515;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+}
+
+.list {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  background: #151515;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.name {
+  font-weight: 600;
+}
+.price {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1b1b1b;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.btn {
+  border: none;
+  background: #222;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.amount {
+  min-width: 20px;
+  text-align: center;
+}
+
+.subtotal {
+  text-align: right;
+  font-weight: 600;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.clear {
+  border: 1px solid #333;
+  background: transparent;
+  color: #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.checkout {
+  border: none;
+  background: #2ecc71; /* puedes cambiarlo por tu color de marca */
+  color: #111;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
