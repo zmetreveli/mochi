@@ -4,7 +4,8 @@ import comboMochi from "../../assets/img/comboMochi.jpeg";
 import mochiChocolate from "../../assets/img/mochiChocolate.jpg";
 import mochiMatcha from "../../assets/img/mochiMatcha.jpg";
 import mochiMangue from "../../assets/img/mochiMangue.webp";
-import mochiVanille from "../../assets/img/mochiVanille.jpg"; // 👈 añade esta imagen si la tienes
+import mochiVanille from "../../assets/img/mochiVanillee.jpg"; // 👈 añade esta imagen si la tienes
+import mochiTradition from "../../assets/img/mochiTradition.webp";
 
 const Blog = () => {
   return (
@@ -150,6 +151,49 @@ const Blog = () => {
           Chez <strong>MochiDS</strong>, nous considérons le{" "}
           <strong>mochi vanille</strong> comme une base essentielle de notre
           collection, un classique indémodable qui ne déçoit jamais.
+        </p>
+      </article>
+      {/* ✅ Cinquième article */}
+      <article className={styles.article}>
+        <h2 className={styles.h2}>
+          La valeur culturelle et gastronomique du mochi
+        </h2>
+        <p className={styles.p}>
+          Le <strong>mochi</strong> n&apos;est pas seulement un{" "}
+          <em>dessert japonais</em>. C&apos;est aussi un symbole de tradition et
+          de partage. Depuis des siècles, il accompagne les grandes fêtes
+          japonaises, notamment le Nouvel An, où il représente la chance et la
+          prospérité pour l&apos;année à venir.
+        </p>
+
+        <p className={styles.p}>
+          <img
+            className={styles.imageArticle}
+            src={mochiTradition}
+            alt="Préparation traditionnelle du mochi au Japon"
+          />
+        </p>
+
+        <p className={styles.p}>
+          Au-delà de son importance culturelle, le mochi est aujourd&apos;hui
+          reconnu comme un <strong>produit gastronomique</strong> à part
+          entière. En France, il est apprécié pour sa texture unique et ses
+          saveurs délicates, allant des versions classiques comme la{" "}
+          <strong>vanille</strong> jusqu&apos;aux saveurs plus audacieuses comme
+          le <strong>mangue passion</strong> ou le <strong>thé matcha</strong>.
+        </p>
+        <p className={styles.p}>
+          Cette double identité — à la fois tradition culturelle et plaisir
+          culinaire — est ce qui fait du <strong>mochi glacé</strong> un produit
+          si spécial. Il s&apos;agit d&apos;une expérience gustative mais aussi
+          d&apos;un héritage culturel japonais qui séduit de plus en plus les
+          gourmands en France.
+        </p>
+        <p className={styles.p}>
+          Chez <strong>MochiDS</strong>, nous croyons que chaque mochi est plus
+          qu&apos;un simple dessert&nbsp;: c&apos;est un petit morceau de
+          tradition japonaise, revisité pour plaire aux palais modernes. Une
+          douceur qui unit culture et gourmandise.
         </p>
       </article>
     </div>
