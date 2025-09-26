@@ -45,7 +45,7 @@ export default function AdminLogin({ onLoggedIn }) {
   return (
     <div className={styles.loginPage}>
       <form onSubmit={handleLogin} className={styles.loginForm}>
-        <h2>Admin — Iniciar sesión</h2>
+        <h2>Admin — Se connecter</h2>
 
         <input
           type="email"
@@ -69,11 +69,11 @@ export default function AdminLogin({ onLoggedIn }) {
             checked={remember}
             onChange={(e) => setRemember(e.target.checked)}
           />
-          Recordar mis datos
+          Se souvenir de mes données
         </label>
 
         <button type="submit" className={styles.button}>
-          Entrar
+          Entrer
         </button>
         {err && <p className={styles.error}>{err}</p>}
       </form>
