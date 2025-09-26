@@ -26,7 +26,7 @@ export default function AdminGate() {
     return () => sub.subscription.unsubscribe();
   }, []);
 
-  if (!ready) return <p style={{ padding: 16 }}>Cargando…</p>;
+  if (!ready) return <p style={{ padding: 16 }}>Chargement…</p>;
 
   // Si no hay usuario: pide login
   if (!user) return <AdminLogin onLoggedIn={() => {}} />;
@@ -35,14 +35,14 @@ export default function AdminGate() {
   if (user.email !== ADMIN_EMAIL) {
     return (
       <div style={{ padding: 16 }}>
-        <p>No tienes permisos para acceder.</p>
+        <p>Vous n’avez pas l’autorisation d’accéder.</p>
         <button
           onClick={async () => {
             await supabase.auth.signOut();
             location.reload();
           }}
         >
-          Salir
+          Quitter
         </button>
       </div>
     );
