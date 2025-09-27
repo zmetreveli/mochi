@@ -9,6 +9,35 @@ export default function AdminPanel() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
+  //! --- Pedidos recientes (últimas 50 filas) ---
+  const [recentOrders, setRecentOrders] = useState([]);
+  const [oLoading, setOLoading] = useState(false);
+  const [oErr, setOErr] = useState("");
+
+  const loadRecentOrders = useCallback(async () => {
+    setOErr("");
+    setOLoading(true);
+    try {
+      const { data, error } = await supabase
+        .from("orders")
+        .select("*")
+        .order("created_at", { ascending: false })
+        .limit(50);
+      if (error) throw error;
+      setRecentOrders(data || []);
+    } catch (e) {
+      setOErr(e.message || String(e));
+    } finally {
+      setOLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadRecentOrders();
+  }, [loadRecentOrders]);
+
+  //! -------------------------------------------------------------
+
   const load = useCallback(async () => {
     setError("");
     const { data, error } = await supabase
@@ -37,6 +66,26 @@ export default function AdminPanel() {
     if (error) alert(error.message);
     setSaving(false);
   };
+
+  //! -------------------------------------------------------------
+  // Realtime: inserciones/updates en orders
+  useEffect(() => {
+    const channel = supabase
+      .channel("orders-realtime")
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "orders" },
+        (payload) => {
+          // estrategia simple: recargar lista
+          loadRecentOrders();
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [loadRecentOrders]);
 
   const uploadImage = async (id, file) => {
     if (!file) return;
@@ -228,7 +277,6 @@ export default function AdminPanel() {
           <h2 className="admin-title">Panneau Admin — Produits</h2>
           <span className="admin-badge">Mochi</span>
         </div>
-
         <div className="admin-topbar">
           <button
             className="admin-btn admin-btn--primary big"
@@ -241,12 +289,10 @@ export default function AdminPanel() {
             Salir
           </button>
         </div>
-
         <p className="admin-saving">{saving ? "Guardando..." : " "}</p>
         {error && (
           <p style={{ color: "#ff8c8c", marginBottom: 12 }}>Error: {error}</p>
         )}
-
         {/* -------- Lista de productos -------- */}
         <div className="admin-card">
           {items.length === 0 ? (
@@ -310,7 +356,6 @@ export default function AdminPanel() {
             ))
           )}
         </div>
-
         {/* -------- Dashboard -------- */}
         <div className="admin-toolbar" style={{ marginTop: 24 }}>
           <h2 className="admin-title">Dashboard</h2>
@@ -318,7 +363,6 @@ export default function AdminPanel() {
             ↻ Refresh
           </button>
         </div>
-
         {mErr && (
           <div className="admin-card" style={{ color: "#ff8c8c" }}>
             Error cargando métricas: {mErr}
@@ -328,7 +372,6 @@ export default function AdminPanel() {
             </div>
           </div>
         )}
-
         <div className="admin-grid-3">
           <div className="admin-kpi">
             <div className="admin-kpi-label">Ingresos (últimos días)</div>
@@ -343,7 +386,6 @@ export default function AdminPanel() {
             <div className="admin-kpi-value">{totalUnits}</div>
           </div>
         </div>
-
         <div className="admin-grid-2">
           <div className="admin-card">
             <div className="admin-card-title">Top productos</div>
@@ -401,7 +443,6 @@ export default function AdminPanel() {
             )}
           </div>
         </div>
-
         <div className="admin-card">
           <div className="admin-card-title">Pedidos por día</div>
           {mLoading ? (
@@ -431,7 +472,49 @@ export default function AdminPanel() {
             </table>
           )}
         </div>
-
+        <div className="admin-toolbar" style={{ marginTop: 24 }}>
+          <h2 className="admin-title">Pedidos recientes (tiempo real)</h2>
+          <button className="admin-btn" onClick={loadRecentOrders}>
+            ↻ Refresh
+          </button>
+        </div>
+        <div className="admin-card">
+          {oErr && (
+            <div className="admin-note" style={{ color: "#ff8c8c" }}>
+              Error: {oErr}
+            </div>
+          )}
+          {oLoading ? (
+            <div className="admin-note">Cargando…</div>
+          ) : recentOrders.length === 0 ? (
+            <div className="admin-note">Sin pedidos aún.</div>
+          ) : (
+            <table className="admin-table admin-table--compact">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Cliente</th>
+                  <th>Estado</th>
+                  <th>Total (€)</th>
+                  <th>ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                {recentOrders.map((o) => (
+                  <tr key={o.id}>
+                    <td>{new Date(o.created_at).toLocaleString()}</td>
+                    <td>{o.customer_name || o.customer || "—"}</td>
+                    <td>{o.status || "—"}</td>
+                    <td>{Number(o.total || 0).toFixed(2)}</td>
+                    <td className="admin-note" title={o.id}>
+                      {String(o.id).slice(0, 8)}…
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
         {/* -------- Registro manual (tipo Excel) -------- */}
         <div className="admin-toolbar" style={{ marginTop: 24 }}>
           <h2 className="admin-title">Registro manual (tipo Excel)</h2>
@@ -450,13 +533,11 @@ export default function AdminPanel() {
             </button>
           </div>
         </div>
-
         {msErr && (
           <div className="admin-card" style={{ color: "#ff8c8c" }}>
             Error: {msErr}
           </div>
         )}
-
         <div className="admin-card">
           {msLoading ? (
             <div className="admin-note">Cargando…</div>
