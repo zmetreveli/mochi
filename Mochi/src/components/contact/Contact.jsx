@@ -88,6 +88,16 @@ const Contact = () => {
             </a>
           </p>
           <p>
+            <strong>YouTube:</strong>{" "}
+            <a
+              href="https://www.youtube.com/@mochi_france"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube.com/ourcompany
+            </a>
+          </p>
+          <p>
             <strong>Twitter:</strong>{" "}
             <a
               href="https://twitter.com/ourcompany"
