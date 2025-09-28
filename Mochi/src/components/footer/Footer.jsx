@@ -133,7 +133,7 @@ const Footer = () => {
           <li className={styles.iconItem}>
             <a
               className={styles.iconLink}
-              href="https://youtube.com/"
+              href="https://www.youtube.com/@mochi_france"
               aria-label="Youtube"
               data-social="youtube"
             >
