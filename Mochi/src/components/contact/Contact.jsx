@@ -127,6 +127,16 @@ const Contact = () => {
               instagram.com/ourcompany
             </a>
           </p>
+          <p>
+            <strong>Facebook:</strong>{" "}
+            <a
+              href="https://www.facebook.com/profile.php?id=61562013538378"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook.com/ourcompany
+            </a>
+          </p>
         </div>
       </div>
 
