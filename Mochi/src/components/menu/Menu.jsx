@@ -71,6 +71,9 @@ export default function Menu() {
   }, [load]);
 
   if (status === "loading") {
+    // justo antes del return
+    console.log("🍡 Productos que llegan al menú:", products);
+
     return (
       <div className={styles.menuPage}>
         <div className={styles.inner}>
