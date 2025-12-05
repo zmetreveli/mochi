@@ -34,8 +34,12 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      {/* 👇 ahora todo tiene acceso al carrito */}
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       <CartProvider>
         <NavBar />
         <Routes>
