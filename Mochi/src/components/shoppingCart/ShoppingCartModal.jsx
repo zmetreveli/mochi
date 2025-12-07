@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useCart } from "../../components/context/CartContext"; // ajusta la ruta si es "contexts"
+import { useCart } from "../../components/context/CartContext";
 import styles from "./ShoppingCartModal.module.css";
 
 export default function ShoppingCartModal({ onClose }) {
@@ -37,9 +37,6 @@ export default function ShoppingCartModal({ onClose }) {
       text
     )}`;
     window.open(url, "_blank");
-
-    // (Optionnel) Vider le panier après envoi :
-    // clear();
   }
 
   if (!items.length) {

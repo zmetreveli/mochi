@@ -30,9 +30,9 @@ export default function Menu() {
 
     const { data, error } = await supabase
       .from("products")
-      .select("id,name,description,price,img_src") // solo columnas necesarias
+      .select("id,name,description,price,img_src")
       .order("name", { ascending: true })
-      .range(0, 49); // defensivo (50 max)
+      .range(0, 49);
 
     if (!isMounted.current) return;
 
@@ -71,7 +71,6 @@ export default function Menu() {
   }, [load]);
 
   if (status === "loading") {
-    // justo antes del return
     console.log("🍡 Productos que llegan al menú:", products);
 
     return (

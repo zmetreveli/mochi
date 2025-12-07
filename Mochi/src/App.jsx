@@ -11,7 +11,6 @@ import Modal from "react-modal";
 import { supabase } from "./lib/supabase";
 import AdminGate from "./admin/AdminGate";
 import Recettes from "./components/recettes/Recettes";
-// 👇 nuevo
 import { CartProvider } from "./components/context/CartContext";
 
 Modal.setAppElement("#root");
