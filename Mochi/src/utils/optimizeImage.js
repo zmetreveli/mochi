@@ -26,6 +26,6 @@ export function optimizeImage(
     return `${origin}/storage/v1/render/image/public/${key}?${qp.toString()}`;
   }
 
-  // Si no es Supabase, la devolvemos tal cual (igual aplicamos lazy en <img>)
+  // Si no es Supabase, la devolvemos tal cual (igual aplico lazy en <img>)
   return url;
 }
